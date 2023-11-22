@@ -11,7 +11,7 @@ type TaskWithReduxPropsType = {
     todolistId: string
 }
 
-export const TaskWithRedux =(props:TaskWithReduxPropsType) => {
+export const TaskWithRedux =memo((props:TaskWithReduxPropsType) => {
 
     const dispatch = useDispatch()
     const onClickHandler = () => dispatch(removeTaskAC(props.task.id, props.todolistId))
@@ -37,5 +37,5 @@ export const TaskWithRedux =(props:TaskWithReduxPropsType) => {
             </IconButton>
         </div>
     );
-};
+});
 

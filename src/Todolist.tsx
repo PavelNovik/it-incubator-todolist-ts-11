@@ -64,7 +64,7 @@ export const Todolist = memo((props: PropsType) => {
             tasksForTodolist = allTodolistTasks.filter(t => t.isDone === true);
         }
 
-    }, [props.filter]);
+    }, [props.filter, props.tasks]);
 
 
     return <div>
